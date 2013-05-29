@@ -4,13 +4,48 @@
 
 //var last_clicked = "";
 var TabbedContent = {
+    /**
+     * Holds the container where the tabs and the content should go
+     * @type String
+     */
     whole_container : '.tab_wrap',
+   /**
+    * Container for the tab content, in this container should go data displayed when a tab is active (tab content html)
+    * @type String
+    */
     tab_content_wrap : '.tabs_content',
+    /**
+     * The identifier for the div where the content of the tabs should be held
+     * @type String
+     */
     tab_content : '.tab_content',
+    /**
+     * The format to use when creating new tabs content 
+     *  {0} will hold the content identifier
+     *  {1] will hold the content inserted by the tab
+     * @type String
+     */
     tab_content_format : '<div class="{0}">{1}</div>',
+    
+    /**
+    * The identifier for the tab container (Where the tabs will be held inside whole_container)
+    * @type String
+    */
     tabs_wrap : '.tabs',
+    /**
+     * Class that would have and share all the tabs
+     * @type String
+     */
     tab_id : '.tab',
+    /**
+     * Format used while creating new tabs (tab html)
+     * @type String
+     */
     tab_format : '<div class="{0}">{1}</div>',
+    /**
+     * A div, image or something that would be placed on top of the currently selected tab
+     * @type String
+     */
     active_tab : '.active_tab',
     //startup_tab : '.world',
 
@@ -18,7 +53,7 @@ var TabbedContent = {
      * Initializes the tabs.
      * This function is an alias to setUpTabs()
      */
-    init : function() {  
+    init : function() {	
             TabbedContent.setUpTabs();
             //$(TabbedContent.startup_tab).click();
     },
