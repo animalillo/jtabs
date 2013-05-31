@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <link rel="stylesheet" type="text/css" href="tabbedContent.css" />
+
+        <script src="jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="tabbedContent.js"></script>
+    </head>
+    <body>
+        <div class="tab_wrap">
+            <div class="tabs">
+                <div class="active_tab"></div>
+                <div class="tab test">tab1</div>
+                <div class="tab test_thing">tab2</div>
+            </div>
+            <div class="tabs_content">
+                <div class="tab_content test">tested content</div>
+                <div class="tab_content test_thing">
+                    <table border="1">
+                        <tr>
+                            <th>This</th>
+                            <th>Is</th>
+                        </tr>
+                        <tr>
+                            <td>Some</td>
+                            <td>HTML</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script>
+            // This would set the focus on the tab labeled test; allready on the page
+            TabbedContent.changeTo('test');
+            // This code will create a new tab named javascript_tab and with the title javascript tab
+            TabbedContent.addTab('javascript_tab', 'javascript tab', 'Javascript tab <b>content</b> <br> this is the content');
+        </script>
+    </body>
+</html>
